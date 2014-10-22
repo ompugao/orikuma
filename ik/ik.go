@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/mattn/ujihisa"
+	"github.com/ompugao/orikuma"
 )
 
 var debug = flag.Bool("d", false, "debug")
@@ -28,7 +28,7 @@ func main() {
 	}
 
 	if err == nil {
-		vm := ujihisa.NewVM()
+		vm := orikuma.NewVM()
 		vm.Debug = *debug
 		err = vm.Run(string(b))
 	}

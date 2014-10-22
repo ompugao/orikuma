@@ -1,4 +1,4 @@
-package ujihisa
+package orikuma
 
 import (
 	"bufio"
@@ -72,9 +72,9 @@ func (vm *VM) reset() {
 func (vm *VM) parse(s string) error {
 	var bc []byte
 
-	cmdA := "便利"
-	cmdB := "感極まってきました"
-	cmdN := "かなり"
+	cmdA := "深い悲しみに包まれる"
+	cmdB := "うんまあ知ってた"
+	cmdN := "ｱｯﾙｪｰ"
 
 	for len(s) > 0 {
 		switch {
@@ -320,7 +320,7 @@ func (vm *VM) Run(s string) error {
 			heap[addr] = n
 		}
 		if vm.do("N") {
-			fmt.Println("かなり")
+			fmt.Println("ｱｯﾙｪｰ")
 		}
 	}
 	return nil
